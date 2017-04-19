@@ -26,7 +26,7 @@ max    f (x1, x2) = 21.5 + x1·sin(4p x1) + x2·sin(20p x2)
 s. t.    -3.0 <= x1 <= 12.1
           4.1 <= x2 <= 5.8
 
-![function](//img.tianle.me/image/20170419/maxfunction.jpg)
+![function](http://img.tianle.me/image/20170419/maxfunction.jpg)
 
 ```python
 def func(self):
@@ -39,9 +39,9 @@ def func(self):
 $${2^{{m_j} - 1}} < ({b_j} - {a_j})*precision \le {2^{{m_j}}} - 1$$
 其中precision为精度，如小数点后5位，则precision=10^5，m<sub>j</sub>为编码长度，${x_j} \in [{a_j},{b_j}]$
 #### 二进制解码
-解码即编码的逆过程：
+解码即编码的逆过程:
 $${x_j} = {a_j} + {\rm{decimal}}(substrin{g_j}) \times \frac{{{b_j} - {a_j}}}{{{2^{{m_j}}} - 1}}$$
-![function](//img.tianle.me/image/20170419/coding.jpg)
+![function](http://img.tianle.me/image/20170419/coding.jpg)
 
 ```python
 def decoding(self, code_x1, code_x2):
@@ -83,7 +83,7 @@ def rand_init(self):
 ```
 #### 选择
 选择我们采用轮盘赌方式进行选择，主要思想是适应度高的，被选择到的概率大。
-![function](//img.tianle.me/image/20170419/selection.jpg)
+![function](http://img.tianle.me/image/20170419/selection.jpg)
 没怎么优化，用了一堆for循环。。。。
 ```python
     def select(self):
@@ -131,7 +131,7 @@ def rand_init(self):
 ```
 #### 变异
 这里的变异，我们先以变异概率，从种群中选一个，然后对选中的个体，随机选一个变异位点进行变异。
-![function](//img.tianle.me/image/20170419/mutation.jpg)
+![function](http://img.tianle.me/image/20170419/mutation.jpg)
 ```python
     def mutation(self):
         """
@@ -155,8 +155,8 @@ def rand_init(self):
 ```
 #### 交叉
 这里采用单点交叉法。随机从种群中选两个个体，然后再随机选一个交叉点，交换位置。看图 = . =
-![function](//img.tianle.me/image/20170419/crossover.jpg)
-![function](//img.tianle.me/image/20170419/crossoverCode.jpg)
+![function](http://img.tianle.me/image/20170419/crossover.jpg)
+![function](http://img.tianle.me/image/20170419/crossoverCode.jpg)
 ```python
     def cross(self):
         """
@@ -224,7 +224,7 @@ def rand_init(self):
         plt.show()
 ```
 #### 实验结果图
-![function](//img.tianle.me/image/20170419/result.png)
+![function](http://img.tianle.me/image/20170419/result.png)
 
 ### 总结
 在编码的时候，我偷懒了一下，把两个变量拆开写，x1和x2，导致之后的操作变得异常复杂，并且不利于代码重构。
